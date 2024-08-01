@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER" prefHeight="291.0" prefWidth="600.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.c01survivor.JobController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!-- Left side: ASCII art display area -->
+    <VBox alignment="CENTER" spacing="20.0">
+        <!-- ASCII art display area -->
+        <TextArea fx:id="asciiArtDisplay" editable="false" prefHeight="280.0" wrapText="true" style="-fx-control-inner-background: transparent; -fx-background-color: transparent; -fx-font-size: 10px; -fx-text-fill: black; -fx-font-family: 'Consolas';" />
+
+        <!-- Button at the bottom -->
+        <Button fx:id="jobButton" onAction="#buttonClick" prefHeight="27.0" prefWidth="97.0" text="Do roboty!" alignment="BOTTOM_CENTER" />
+    </VBox>
+
+    <!-- Right side: Input and display area for time calculation -->
+    <VBox alignment="TOP_CENTER" spacing="10.0">
+        <Label text="Wprowadź godzinę" />
+        <TextField fx:id="timeInputField" promptText="HH:MM:SS" />
+        <Button fx:id="saveButton" onAction="#onSaveButtonClick" text="Zapisz" />
+        <Label text="Koniec pracy:" />
+        <Label fx:id="resultLabel" text="" />
+    </VBox>
+</HBox>
